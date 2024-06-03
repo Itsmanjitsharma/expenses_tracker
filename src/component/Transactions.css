@@ -1,0 +1,66 @@
+.transaction-list {
+ width: 100%;
+  padding: 0px;
+  max-height: 400px; /* Adjust the max height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+  .transaction-list::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .transaction-group {
+    margin-bottom: 20px;
+  }
+  
+  .transaction-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 5px 5px 15px #aaaaaa, -5px -5px 15px #ffffff;
+    transition: all 0.2s;
+  }
+  
+  .transaction-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7a54ff;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .transaction-item .details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .transaction-item .details span {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .transaction-item .amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+.icon-details{
+   display: flex;
+   flex-direction: row;
+}
+  

@@ -1,0 +1,224 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+.add-expenses-container {
+  /* Styles for the child container */
+  width: 30%; /* 30% of the width of the parent container */
+  margin-left: 20px;
+  padding: 20px;
+  background: #D2D4E4;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.add-expenses-chart {
+    padding: 10px 20px !important;
+    background: #D2D4E4 !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+}
+.neumorphism-expense {
+  background: #D2D4E4;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.allTransactions{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 1px;
+  padding-right: 20px;
+  background: #D2D4E4 !important;
+  border-radius: 20px !important;
+  margin-bottom: 10px !important;
+  display: flex;
+  flex-direction:column;
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  position: relative;
+}
+.allTransactions::-webkit-scrollbar{
+   width: 1px;
+}
+.allTransactions-sub{
+     position: relative;;
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+     padding: 10px;
+     margin-bottom: 10px;
+     align-items: center; /* Align items vertically */
+
+}
+.allTransactions-sub strong {
+  margin-left: 10px; /* Adjust spacing between icon and text */
+}
+
+.allTransactions-sub p {
+  margin-left: auto; /* Push the amount to the right */
+}
+.transaction-details {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  /*flex-grow: 1 !important;*/
+  /*text-align: left !important;*/ /* Ensure text is left-aligned */
+}
+
+.transaction-date {
+  color: #a9a9a9 !important; /* Light grey color */
+  margin-top: 2px !important; /* Minimal gap between note and date */
+  font-size: 0.85em !important; /* Slightly smaller font size for the date */
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+  width: 50px;
+  height: 50px;
+}
+.allTransaction-dayweakmonth{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.allTransaction-dayweakmonth select{
+  background: #D2D4E4 !important;
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+  border: none;
+  outline: none; /* Remove the border */
+  padding: 2px;
+}
+
+
+.addexpenses-container{
+  position: absolute;
+  width: 30%; /* 30% of the width of the parent container */
+  margin: 0px;
+  padding: 20px;
+  background: #D2D4E4;
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px #bebebe, -2px -2px 6px #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30%;
+}
+.left-icon{
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.expenses-amount {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.amount-input-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 5px; /* Adjust spacing between strong and input container */
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 10px;
+
+}
+
+.amount-input-container p {
+  margin: 0 10px 0 0; /* Adjust spacing between paragraph and input */
+  box-shadow: 5px 5px 5px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 5px;
+}
+.amount-input-container input {
+  flex: 1; /* Allow input to take up available space */
+  padding: 10px;
+  outline: none;
+  background: #D2D4E4;
+  border: none;
+}
+.expenses-category {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Adjust as needed */
+  margin-top: 20px;
+}
+.expenses-category-container{
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 5px; /* Adjust spacing between strong and input container */
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 10px;
+  justify-content: space-between;
+}
+.expenses-category-container p {
+  margin: 0 10px 0 0; /* Adjust spacing between paragraph and input */
+  box-shadow: 5px 5px 5px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 5px;
+}
+.expenses-category-container select {
+    padding: 7px;
+    outline: none;
+    background: #D2D4E4;
+    border: none;
+}
+
+.expenses-notes {
+  margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   margin-right: 20px;
+}
+
+.expenses-notes input {
+  position: relative;
+  flex: 1; /* Allow input to take up available space */
+  padding: 20px 10px;
+  outline: none;
+  background: #D2D4E4;
+  border: none;
+  box-shadow: 5px 5px 5px #bebebe, -2px -2px 5px #ffffff !important;
+  width: 100%;
+  font-size: 20px;
+}
+
+.payment-button{
+  position: sticky;
+  bottom: 300;
+  width: 100%;
+  background: #9154e7 !important;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin-top: 70%;
+  border-radius: 20px;
+  color: white;
+  
+}
