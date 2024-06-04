@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Income.css';
 const Income = () => {
     return (

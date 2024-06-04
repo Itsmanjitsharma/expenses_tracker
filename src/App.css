@@ -176,6 +176,21 @@
   padding: 10px;
   justify-content: space-between;
 }
+.expenses-date{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.expenses-date-container{
+  
+  margin: 0 10px 0 0; /* Adjust spacing between paragraph and input */
+  box-shadow: 5px 5px 5px #bebebe, -2px -2px 5px #ffffff !important;
+  padding: 10px 1px;
+  outline: none;
+  background: #D2D4E4;
+  border: none;
+  width: 100%;
+}
 .expenses-category-container p {
   margin: 0 10px 0 0; /* Adjust spacing between paragraph and input */
   box-shadow: 5px 5px 5px #bebebe, -2px -2px 5px #ffffff !important;
@@ -217,8 +232,9 @@
   display: flex;
   justify-content: center;
   border: none;
-  margin-top: 70%;
+  margin-top: 40%;
   border-radius: 20px;
   color: white;
+  cursor: pointer;
   
 }

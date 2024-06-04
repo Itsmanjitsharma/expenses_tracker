@@ -1,44 +1,23 @@
-import { Chart } from 'chart.js';
 import React, { useState, useEffect } from 'react';
 import './AllTransaction.css';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { IoMdCash } from 'react-icons/io';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const AllTransaction = () => {
     const [period, setPeriod] = useState('Day');
     const [chartData, setChartData] = useState({ labels: [], datasets: [] });
-    const today = new Date();
+    const [transactions, setTransactions] = useState([]);
     const handlePeriodChange = (event) => {
         setPeriod(event.target.value);
     };
-    const transactions = [
-        { amount: 20, category: 'Food', date: '2024-05-12', note: 'Had drink with Friends' },
-        { amount: 50, category: 'Entertainment', date: '2024-05-11', note: 'Went to a movie' },
-        { amount: 30, category: 'Transport', date: '2024-05-10', note: 'Taxi fare' },
-        { amount: 60, category: 'Shopping', date: '2024-05-09', note: 'Bought a new shirt' },
-        { amount: 15, category: 'Food', date: '2024-05-08', note: 'Lunch at work' },
-        { amount: 100, category: 'Bills', date: '2024-05-07', note: 'Electricity bill' },
-        { amount: 80, category: 'Groceries', date: '2024-05-06', note: 'Weekly grocery shopping' },
-        { amount: 40, category: 'Health', date: '2024-05-05', note: 'Bought vitamins' },
-        { amount: 25, category: 'Transport', date: '2024-05-04', note: 'Gas for car' },
-        { amount: 45, category: 'Entertainment', date: '2024-05-03', note: 'Concert tickets' },
-        { amount: 35, category: 'Food', date: '2024-05-02', note: 'Dinner with family' },
-        { amount: 20, category: 'Shopping', date: '2024-05-01', note: 'Bought a book' },
-        { amount: 90, category: 'Bills', date: '2024-04-30', note: 'Water bill' },
-        { amount: 10, category: 'Transport', date: '2024-04-29', note: 'Bus fare' },
-        { amount: 70, category: 'Groceries', date: '2024-04-28', note: 'Bought vegetables' },
-        { amount: 25, category: 'Health', date: '2024-04-27', note: 'Doctor visit' },
-        { amount: 15, category: 'Food', date: '2024-04-26', note: 'Breakfast at cafe' },
-        { amount: 40, category: 'Shopping', date: '2024-04-25', note: 'Bought new shoes' },
-        { amount: 55, category: 'Entertainment', date: '2024-04-24', note: 'Bought video game' },
-        { amount: 75, category: 'Bills', date: '2024-04-23', note: 'Internet bill' },
-        { amount: 50, category: 'Transport', date: '2024-04-22', note: 'Car maintenance' }
-    ];
+
 
     useEffect(() => {
+        fetch('your-api-endpoint')
+        .then(response => response.json())
+        .then(data => setTransactions(data))
+        .catch(error => console.error('Error fetching transaction data:', error)); 
         const processTransactions = () => {
             const sortedTransactions = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
             const labels = [];
